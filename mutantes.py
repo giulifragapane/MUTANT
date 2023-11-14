@@ -10,11 +10,13 @@ def isMutant(dna):
     def valid_horizontal(matrix):
         count = 0
         for row in matrix:
-            for col in range(cols - 3):
-                secuencia = ''.join(row[col:col + 4])
-                if control_sequence(secuencia):
-                    print("Secuencia horizontal encontrada: ", secuencia)
-                    count += 1
+            if row[2] == row[3]:
+                for col in range(cols - 3):
+                    secuencia = ''.join(row[col:col + 4])
+                    if control_sequence(secuencia):
+                        count += 1
+                        if count < 3:
+                            print("Secuencia horizontal encontrada: ", secuencia)
         return count
     # Llamamos a la función
     count = valid_horizontal(dna) 
@@ -24,11 +26,13 @@ def isMutant(dna):
     # Verifica si hay secuencias iguales en forma vertical
         def valid_vertical(matrix, count):
             for col in range(cols):
-                for row in range(rows - 3):
-                    secuencia = ''.join(matrix[row + i][col] for i in range(4))
-                    if control_sequence(secuencia):
-                        print("Secuencia vertical encontrada: ", secuencia)
-                        count += 1
+                if matrix[2][col] == matrix[3][col]:
+                    for row in range(rows - 3):
+                        secuencia = ''.join(matrix[row + i][col] for i in range(4))
+                        if control_sequence(secuencia):
+                            count += 1
+                            if count < 3:
+                                print("Secuencia vertical encontrada: ", secuencia)
             return count
         count = valid_vertical(dna,count)
         if count >= 2:
@@ -40,8 +44,9 @@ def isMutant(dna):
                     for col in range(cols - 3):
                         secuencia = ''.join(matrix[row + i][col + i] for i in range(4))
                         if control_sequence(secuencia):
-                            print("Secuencia diagonal encontrada: ", secuencia)
                             count += 1
+                            if count < 3:
+                                print("Secuencia diagonal encontrada: ", secuencia)
                 return count
             count = valid_diagonal(dna,count)
             if count >=2:
@@ -53,8 +58,9 @@ def isMutant(dna):
                         for col in range(3, cols):
                             secuencia = ''.join(matrix[row + i][col - i] for i in range(4))
                             if control_sequence(secuencia):
-                                print("Secuencia diagonal sec. encontrada: ", secuencia)
                                 count += 1
+                                if count < 3:
+                                    print("Secuencia diagonal sec. encontrada: ", secuencia)
                     return count
                 count = valid_rev_diagonal(dna,count)
                 if count >= 2:
@@ -63,22 +69,21 @@ def isMutant(dna):
                     return False
 # Ejemplo de un MUTANTE con una matriz 6x6
 dna_ex = [
-    "AAAATT",
-    "CCCCTC",
-    "TCTTGT",
-    "AGTAGG",
-    "CCCCTA",
-    "TCAAAA"
+    "GTGGGG",
+    "CAACTC",
+    "TCCTGT",
+    "ATTAGG",
+    "CTTCAA",
+    "TCATGT"
 ]
-print("||| Bienvenido a GenomeSpy Ultra |||\nPor favor, siga las instrucciones:")
+print("||| Bienvenido a GenomeSpy Ultra |||\n Por favor, siga las instrucciones:")
 # Ingresar las filas de la matriz por teclado
 #dna = [input(f"Ingrese la fila {i + 1} de la matriz: ").upper() for i in range(6)]
 
 # Verificar si es mutante y mostrar el resultado
 result = isMutant(dna_ex)
-print("Resultado: ", result)
+print("- - - - -\nResultado: ", result)
 if result:
-    print("ES mutante")
-    print("Comienza fase de aislamiento...")
+    print("- - - - - \nMUTANTE DETECTADO \nSe encontró más de 1 secuencia \nComienza fase de aislamiento...\n- - - - -")
 else:
-    print("NO es mutante")
+    print("- - - - - \nNO MUTANTE\nEspere a la entrega de su certificado\n- - - - -")
