@@ -72,7 +72,7 @@ def isMutant(dna):
                     return False
 
 print("||| Bienvenido a GenomeSpy Ultra |||\n Por favor, siga las instrucciones:\n - Ingrese la serie de su ADN (6 bases: A, T, C o G)")
-
+time.sleep(3)
 # Ingresa las filas de la matriz por teclado
 bases = {'A', 'T', 'C', 'G'}
 dna = []
