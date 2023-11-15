@@ -31,14 +31,14 @@ Si en dichas posiciones las letras son iguales, ya existe la posibilidad de que 
 ![Alt text](image-1.png)
 - Para la creación de las estructuras de código en los casos diagonales, se analizaron también las posibles secuencias por cada diagonal. Se puede visualizar que siempre para estos casos también se ocupan las filas 2 y 3.
 
-La diagonal principal permite 3 posibles secuencias:
+1. La diagonal principal permite 3 posibles secuencias:
 
 ![Alt text](image-3.png)
 
-Las diagonales a la izquierda y derecha de la principal permiten 2 posibilidades:
+2. Las diagonales a la izquierda y derecha de la principal permiten 2 posibilidades:
 ![Alt text](image-4.png)
 
-Y las últimas diagonales posibles permiten 1 posibilidad:
+3. Y las últimas diagonales posibles permiten 1 posibilidad:
 
 ![Alt text](image-5.png)
 
