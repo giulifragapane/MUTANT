@@ -1,6 +1,4 @@
 import time
-
-
 def isMutant(dna):
     rows = len(dna)
     cols = len(dna[0])
@@ -13,6 +11,7 @@ def isMutant(dna):
     def valid_horizontal(matrix):
         count = 0
         for row in matrix:
+            # if para evitar entrar en el bucle, si no se cumple la condición no es necesario el análisis
             if row[2] == row[3]:
                 for col in range(cols - 3):
                     secuencia = ''.join(row[col:col + 4])
@@ -29,6 +28,7 @@ def isMutant(dna):
     # Verifica si hay secuencias iguales en forma vertical
         def valid_vertical(matrix, count):
             for col in range(cols):
+                # if para evitar entrar en el bucle, si no se cumple la condición no es necesario el análisis
                 if matrix[2][col] == matrix[3][col]:
                     for row in range(rows - 3):
                         secuencia = ''.join(matrix[row + i][col] for i in range(4))
@@ -71,14 +71,14 @@ def isMutant(dna):
                 else:
                     return False
 
-print("||| Bienvenido a GenomeSpy Ultra |||\n Por favor, siga las instrucciones:\n - Ingrese la serie de su ADN (6 bases: A, T, C o G)")
+print("||| Bienvenido a Genome Scan |||\n Por favor, siga las instrucciones:\n - Ingrese la serie de su ADN (4 bases: A, T, C o G)")
 time.sleep(3)
-# Ingresa las filas de la matriz por teclado
 bases = {'A', 'T', 'C', 'G'}
 dna = []
 
 for i in range(6):
     while True:
+        # Ingresa las filas de la matriz por teclado
         fila = input(f"Coloque la fila {i + 1} con la serie de 6 bases: ").upper()
 
         # Verificar la longitud y caracteres válidos
@@ -90,8 +90,8 @@ for i in range(6):
 
 print("Datos ingresados correctamente:", dna)
 print("Analizando datos...")
-time.sleep(5)
-# Verificar si es mutante y mostrar el resultado
+time.sleep(4)
+# Verifica si es mutante y muestra el resultado
 result = isMutant(dna)
 print("- - - - -\nResultado: ", result)
 if result:
