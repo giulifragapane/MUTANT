@@ -38,7 +38,10 @@ Si en dichas posiciones las letras son iguales, ya existe la posibilidad de que 
 
     EJEMPLOS PARA INGRESAR:
     
-    1. Para obtener un mutante: CGTAAT TTGGCT ACCCCT TACGGT ACATAA TGTACC
+    1. Para obtener un mutante: 
+    ``` CGTAAT 
+    ``` 
+    TTGGCT ACCCCT TACGGT ACATAA TGTACC
     2. Para obtener un no mutante: ACGTAG CAGCAC GCTACT CATTAG ACGACC ATGGGG
 
 - Archivo mutantes.py tiene una matriz de ejemplo que cumple con los requisitos de mutante.
