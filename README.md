@@ -21,7 +21,7 @@ Desarrolla el algoritmo de la manera más eficiente posible.
 
 ## Abordaje
 ### Algoritmo
-- Primero el usuario debe ingresar las filas de la matriz, donde cada una de ellas será analizada para evitar errores (ingresar letras incorrectas o no respetar el tamaño de la matriz).
+- Primero el usuario debe ingresar las filas de la matriz, donde cada una de ellas será analizada para evitar errores (ingresar letras incorrectas o no respetar el tamaño de la matriz). Se busco crear una interfaz clara con mensajes de salida informativos.
 - Luego, el programa llamará a la función isMutant(dna) la cual contiene otras funciones para la búsqueda de secuencias horizontales, verticales y oblicuas. Primero analizará la existencia de secuencias horizontales, luego verticales, oblicuas (derecha a izquierda) y por último oblicuas (de izquierda a derecha). Para evitar recorrer todos los bucles de cada función, primero, antes de pasar al próximo análisis, verificará si ya se encontró más de una secuencia, si es así, no continuará con el código siguiente y retornará True.
 - Cada función interna usa la función control_sequence(secuencia), que analiza cada secuencia enviada, verificando si hay alguna de las cadenas indicadas ('AAAA', 'TTTT', 'CCCC' o 'GGGG') y devolviendo True en caso de coincidencia. La secuencia enviada es una cadena de 4 bases que se extrae de la matriz en las diferentes direcciones.
 - Para optimizar más el código, dentro del análisis horizontal y vertical establecí condiciones para evitar entrar en el bucle anidado ya que cada posible opción de secuencia, para el caso horizontal, siempre ocuparán las columnas 2 y 3. De manera vertical ocuparán las filas 2 y 3.
@@ -29,6 +29,16 @@ Si en dichas posiciones las letras son iguales, ya existe la posibilidad de que 
 
 ![Alt text](image.png)
 ![Alt text](image-1.png)
+- Para la creación de las estructuras de código en los casos diagonales, se analizaron también las posibles secuencias por cada diagonal. Se puede visualizar que siempre para estos casos también se ocupan las filas 2 y 3.
+La diagonal principal permite 3 posibles secuencias:
+![Alt text](image-3.png)
+
+Las diagonales a la izquierda y derecha de la principal permiten 2 posibilidades:
+![Alt text](image-4.png)
+
+Y las últimas diagonales posibles permiten 1 posibilidad:
+![Alt text](image-5.png)
+
 - Por pantalla se mostrarán las secuencias encontradas. Si se trata de un mutante se visualizarán las dos primeras coincidencias encontradas ya que con tener más de una es motivo suficiente para considerarse mutante.
 - Si el programa luego de recorrer cada función (todas las direcciones), no encuentra más de una secuencia, retornará False.
 - Es importante saber que el algoritmo considera más de una secuencia si por ejemplo, verticalmente se encuentra más de una posibilidad. Como vemos en la imagen de abajo, hay dos posibilidades, de la posición (0 a 3) y de (1 a 4). Esto sucede para cada caso de búsqueda.
