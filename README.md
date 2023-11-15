@@ -20,8 +20,6 @@ Desarrolla el algoritmo de la manera más eficiente posible.
 </p>
 
 ## Abordaje
-* Lenguaje implementado: Python
-* 
 ### Algoritmo
 - Primero el usuario debe ingresar las filas de la matriz, donde cada una de ellas será analizada para evitar errores (ingresar letras incorrectas o no respetar el tamaño de la matriz).
 - Luego, el programa llamará a la función isMutant(dna) la cual contiene otras funciones para la búsqueda de secuencias horizontales, verticales y oblicuas. Primero analizará la existencia de secuencias horizontales, luego verticales, oblicuas (derecha a izquierda) y por último oblicuas (de izquierda a derecha). Para evitar recorrer todos los bucles de cada función, primero, antes de pasar al próximo análisis, verificará si ya se encontró más de una secuencia, si es así, no continuará con el código siguiente y retornará True.
@@ -33,6 +31,16 @@ Si en dichas posiciones las letras son iguales, ya existe la posibilidad de que 
 - Si el programa luego de recorrer cada función no encuentra más de una secuencia, retornará False.
 - Es importante saber que el algoritmo considera más de una secuencia si por ejemplo, verticalmente se encuentra más de una posibilidad. Como vemos en la imagen de abajo, hay dos posibilidades, de la posición (0 a 3) y de (1 a 4). Esto sucede para cada caso de búsqueda.
 ![Alt text](image-2.png)
+### Contenido del repositorio
+- Archivo mainMutantes.py es el archivo para que el usuario ingrese cada fila de la matriz.
+
+    EJEMPLOS PARA INGRESAR:
+    
+    1. Para obtener un mutante: CGTAAT TTGGCT ACCCCT TACGGT ACATAA TGTACC
+    2. Para obtener un no mutante: ACGTAG CAGCAC GCTACT CATTAG ACGACC ATGGGG
+
+- Archivo mutantes.py tiene una matriz de ejemplo que cumple con los requisitos de mutante.
+- Archivo nomutantes.py tiene también una matriz de ejemplo y es para el caso de no mutante.
 ## Cómo correrlo
 Cómo tiene que correrlo el profe desde bash
 Para ejecutar el proyecto es necesario 
