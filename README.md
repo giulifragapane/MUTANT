@@ -23,12 +23,14 @@ Desarrolla el algoritmo de la manera más eficiente posible.
 ### Algoritmo
 - Primero el usuario debe ingresar las filas de la matriz, donde cada una de ellas será analizada para evitar errores (ingresar letras incorrectas o no respetar el tamaño de la matriz).
 - Luego, el programa llamará a la función isMutant(dna) la cual contiene otras funciones para la búsqueda de secuencias horizontales, verticales y oblicuas. Primero analizará la existencia de secuencias horizontales, luego verticales, oblicuas (derecha a izquierda) y por último oblicuas (de izquierda a derecha). Para evitar recorrer todos los bucles de cada función, primero, antes de pasar al próximo análisis, verificará si ya se encontró más de una secuencia, si es así, no continuará con el código siguiente y retornará True.
+- Cada función interna usa la función control_sequence(secuencia), que analiza cada secuencia enviada, verificando si hay alguna de las cadenas indicadas ('AAAA', 'TTTT', 'CCCC' o 'GGGG') y devolviendo True en caso de coincidencia. La secuencia enviada es una cadena de 4 bases que se extrae de la matriz en las diferentes direcciones.
 - Para optimizar más el código, dentro del análisis horizontal y vertical establecí condiciones para evitar entrar en el bucle anidado ya que cada posible opción de secuencia, para el caso horizontal, siempre ocuparán las columnas 2 y 3. De manera vertical ocuparán las filas 2 y 3.
 Si en dichas posiciones las letras son iguales, ya existe la posibilidad de que exista una secuencia y el algoritmo lo analizará, caso contrario, si hubieran letras diferentes ya se elimina la posibilidad de que exista una secuencia porque no se podría formar ninguna de las 3 posibilidades y se evitará.
+
 ![Alt text](image.png)
 ![Alt text](image-1.png)
 - Por pantalla se mostrarán las secuencias encontradas. Si se trata de un mutante se visualizarán las dos primeras coincidencias encontradas ya que con tener más de una es motivo suficiente para considerarse mutante.
-- Si el programa luego de recorrer cada función no encuentra más de una secuencia, retornará False.
+- Si el programa luego de recorrer cada función (todas las direcciones), no encuentra más de una secuencia, retornará False.
 - Es importante saber que el algoritmo considera más de una secuencia si por ejemplo, verticalmente se encuentra más de una posibilidad. Como vemos en la imagen de abajo, hay dos posibilidades, de la posición (0 a 3) y de (1 a 4). Esto sucede para cada caso de búsqueda.
 ![Alt text](image-2.png)
 ### Contenido del repositorio
