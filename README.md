@@ -36,6 +36,7 @@ Si en dichas posiciones las letras son iguales, ya existe la posibilidad de que 
 ![Alt text](image-3.png)
 
 2. Las diagonales a la izquierda y derecha de la principal permiten 2 posibilidades:
+
 ![Alt text](image-4.png)
 
 3. Y las últimas diagonales posibles permiten 1 posibilidad:
