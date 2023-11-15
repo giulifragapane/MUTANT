@@ -30,13 +30,16 @@ Si en dichas posiciones las letras son iguales, ya existe la posibilidad de que 
 ![Alt text](image.png)
 ![Alt text](image-1.png)
 - Para la creación de las estructuras de código en los casos diagonales, se analizaron también las posibles secuencias por cada diagonal. Se puede visualizar que siempre para estos casos también se ocupan las filas 2 y 3.
+
 La diagonal principal permite 3 posibles secuencias:
+
 ![Alt text](image-3.png)
 
 Las diagonales a la izquierda y derecha de la principal permiten 2 posibilidades:
 ![Alt text](image-4.png)
 
 Y las últimas diagonales posibles permiten 1 posibilidad:
+
 ![Alt text](image-5.png)
 
 - Por pantalla se mostrarán las secuencias encontradas. Si se trata de un mutante se visualizarán las dos primeras coincidencias encontradas ya que con tener más de una es motivo suficiente para considerarse mutante.
