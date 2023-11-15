@@ -57,8 +57,25 @@ Si en dichas posiciones las letras son iguales, ya existe la posibilidad de que 
     ```
     TGTACC
     ```
-    2. Para obtener un no mutante: ACGTAG CAGCAC GCTACT CATTAG ACGACC ATGGGG
-
+    2. Para obtener un no mutante (orden de filas 1-6):
+    ```             
+    ACGTAG
+    ``` 
+    ```
+    CAGCAC 
+    ```
+    ```
+    GCTACT 
+    ```
+    ```
+    CATTAG 
+    ```
+    ```
+    ACGACC 
+    ```
+    ```
+    ATGGGG
+    ```
 - Archivo mutantes.py tiene una matriz de ejemplo que cumple con los requisitos de mutante.
 - Archivo nomutantes.py tiene también una matriz de ejemplo y es para el caso de no mutante.
 ## Cómo correrlo
