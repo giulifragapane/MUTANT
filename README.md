@@ -93,7 +93,11 @@ Si en dichas posiciones las letras son iguales, ya existe la posibilidad de que 
 - Archivo mutantes.py tiene una matriz de ejemplo que cumple con los requisitos de mutante.
 - Archivo nomutantes.py tiene también una matriz de ejemplo y es para el caso de no mutante.
 ## Cómo correrlo
-- Abre Git Bash en el directorio donde deseas clonar el repositorio. Puedes usar el comando cd para navegar a la ubicación deseada.
+- Abre Git Bash en el directorio donde deseas clonar el repositorio. 
+Puedes usar el comando cd para navegar a la ubicación deseada.
+```
+cd ubicacion-deseada
+```
 - Clona el repositorio ejecutando el siguiente comando:
 ``` 
 git clone https://github.com/giulifragapane/MUTANT.git
@@ -102,7 +106,5 @@ git clone https://github.com/giulifragapane/MUTANT.git
 ``` 
 cd tu-repositorio
 ```
-- Ahora, para abrir todo el directorio del repositorio en Visual Studio Code, puedes usar el siguiente comando:
-```
-code .
-```
+- Ahora, para abrir todo el directorio del repositorio ve a Visual Studio Code y abre la carpeta.
+- Una vez abierta la carpeta, dirígete al archivo principal mainMutantes.py.
