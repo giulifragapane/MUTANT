@@ -39,7 +39,7 @@ Si en dichas posiciones las letras son iguales, ya existe la posibilidad de que 
 
 ![Alt text](image-4.png)
 
-3. Y las últimas diagonales posibles permiten 1 posibilidad:
+3. Y las últimas diagonales posibles permiten 1 posibilidad cada una:
 
 ![Alt text](image-5.png)
 
