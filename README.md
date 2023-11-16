@@ -45,7 +45,7 @@ Si en dichas posiciones las letras son iguales, ya existe la posibilidad de que 
 
 - Por pantalla se mostrarán las secuencias encontradas. Si se trata de un mutante se visualizarán las dos primeras coincidencias encontradas ya que con tener más de una es motivo suficiente para considerarse mutante.
 - Si el programa luego de recorrer cada función (todas las direcciones), no encuentra más de una secuencia, retornará False.
-- Es importante saber que el algoritmo considera más de una secuencia si por ejemplo, verticalmente se encuentra más de una posibilidad. Como vemos en la imagen de abajo, hay dos posibilidades, de la posición (0 a 3) y de (1 a 4). Esto sucede para cada caso de búsqueda.
+- Es importante saber que el algoritmo considera más de una secuencia si por ejemplo, verticalmente se encuentra más de una posibilidad en la misma columna. Como vemos en la imagen de abajo, hay dos posibilidades, de la posición (0 a 3) y de (1 a 4). Esto sucede para cada caso de búsqueda.
 
 ![Alt text](image-2.png)
 ### Contenido del repositorio
