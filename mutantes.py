@@ -1,4 +1,3 @@
-import time
 def isMutant(dna):
     rows = len(dna)
     cols = len(dna[0])
@@ -72,7 +71,6 @@ def isMutant(dna):
                     return False
 
 print("||| Bienvenido a Genome Scan |||\n Por favor, siga las instrucciones:\n - Ingrese la serie de su ADN (4 bases: A, T, C o G)")
-time.sleep(3)
 dna = [
     "GTGGGG",
     "CAACTC",
@@ -82,7 +80,6 @@ dna = [
     "TCATGT"]
 print("Datos ingresados:", dna)
 print("Analizando datos...")
-time.sleep(4)
 # Verifica si es mutante y muestra el resultado
 result = isMutant(dna)
 print("- - - - -\nResultado: ", result)
